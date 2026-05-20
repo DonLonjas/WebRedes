@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "Plataforma educativa interactiva para explorar el espectro electromagnético",
   "main": "server.js",
+  "bin": "server.js",
   "scripts": {
+    "dev": "npx nodemon server.js",
     "start": "node server.js",
-    "dev": "npx nodemon server.js"
+    "build": "pkg . --targets node18-win-x64 --output dist/EspectroApp.exe"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "routes/**/*",
+      "sockets/**/*",
+      "data/**/*",
+      "middleware/**/*",
+      "utils/**/*"
+    ],
+    "outputPath": "dist"
   },
   "keywords": ["educativo", "espectro", "electromagnético", "quiz", "socket.io"],
   "author": "",
