@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espectro Electromagnético</title>
+  <link rel="icon" href="/icons/spectrum.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/rainbow-background.css">
+  <link rel="stylesheet" href="/css/parallax-stars.css">
+</head>
+
+<body class="dark">
+  <!-- Fondo de arcoíris animado con espectro electromagnético -->
+  <div class="rainbow-bg dark">
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow-h"></div>
+    <div class="rainbow-v"></div>
+  </div>
+
+  <!-- Fondo parallax de estrellas -->
+  <div class="parallax-stars" aria-hidden="true"></div>
+  <script src="/js/parallax-stars.js"></script>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <img src="/icons/logo.svg" alt="Logo" class="logo-img">
+        <h1><span class="text-white">Spectro</span><span class="text-primary">Electromagnético</span></h1>
+        <p class="subtitle">Plataforma educativa del espectro<br>electromagnético</p>
+      </div>
+
+      <div class="login-tabs">
+        <button type="button" class="tab-btn active" id="tab-student" onclick="setRole('student')">🎓
+          Estudiante</button>
+        <button type="button" class="tab-btn" id="tab-teacher" onclick="setRole('teacher')">👩‍🏫 Docente</button>
+        <!-- Campo oculto para mantener la lógica original si existe -->
+        <input type="checkbox" id="docente-toggle" name="docente" style="display:none;"
+          onchange="updateRoleFromToggle()">
+      </div>
+
+      <div class="demo-users-info" id="demo-info">
+        <p><span class="text-primary font-bold">Estudiante:</span> ingresa cualquier nombre de usuario</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">USUARIO</label>
+          <input type="text" id="username" name="username" placeholder="tu_usuario" required>
+        </div>
+
+        <div class="form-group" id="passwordGroup" style="display: none;">
+          <label for="password">CONTRASEÑA</label>
+          <input type="password" id="password" name="password" placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Ingresar &rarr;</button>
+      </form>
+
+      <div id="errorMessage" class="error-message"></div>
+    </div>
+  </div>
+
+  <script>
+    function setRole(role) {
+      const toggle = document.getElementById('docente-toggle');
+      const studentBtn = document.getElementById('tab-student');
+      const teacherBtn = document.getElementById('tab-teacher');
+      const demoInfo = document.getElementById('demo-info');
+      const passwordGroup = document.getElementById('passwordGroup');
+
+      if (role === 'teacher') {
+        toggle.checked = true;
+        teacherBtn.classList.add('active');
+        studentBtn.classList.remove('active');
+        passwordGroup.style.display = 'block';
+        demoInfo.innerHTML = '<p><span class="text-primary font-bold">Ingrese su usuario y contraseña como docente';
+      } else {
+        toggle.checked = false;
+        studentBtn.classList.add('active');
+        teacherBtn.classList.remove('active');
+        passwordGroup.style.display = 'none';
+        document.getElementById('password').value = '';
+        demoInfo.innerHTML = '<p><span class="text-primary font-bold">Estudiante:</span> ingresa cualquier nombre de usuario</p>';
+      }
+
+      // Dispatch change event to keep original auth logic working
+      toggle.dispatchEvent(new Event('change'));
+    }
+
+    function updateRoleFromToggle() {
+      // In case another script changes the toggle directly
+      const isTeacher = document.getElementById('docente-toggle').checked;
+      const passwordGroup = document.getElementById('passwordGroup');
+      if (isTeacher) {
+        document.getElementById('tab-teacher').classList.add('active');
+        document.getElementById('tab-student').classList.remove('active');
+        passwordGroup.style.display = 'block';
+      } else {
+        document.getElementById('tab-student').classList.add('active');
+        document.getElementById('tab-teacher').classList.remove('active');
+        passwordGroup.style.display = 'none';
+        document.getElementById('password').value = '';
+      }
+    }
+  </script>
+
+  <script src="/js/auth.js"></script>
+</body>
+
+</html>

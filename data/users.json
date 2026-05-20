@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "usr_001",
+      "username": "Docente",
+      "password": "123456",
+      "displayName": "Docente",
+      "role": "docente",
+      "avatar": "👩‍🏫",
+      "createdAt": "2024-01-15"
+    }
+  ],
+  "roles": {
+    "docente": {
+      "permissions": [
+        "view_presentation",
+        "start_quiz",
+        "view_leaderboard",
+        "view_dashboard"
+      ]
+    },
+    "estudiante": {
+      "permissions": [
+        "view_presentation",
+        "join_quiz",
+        "view_leaderboard"
+      ]
+    }
+  }
+}

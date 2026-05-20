@@ -1,0 +1,167 @@
+{
+  "quiz": {
+    "title": "¡Desafío del Espectro Electromagnético!",
+    "questions": [
+      {
+        "id": "q001",
+        "topic": "luz_visible",
+        "question": "¿Cuál es el color de la luz visible con mayor longitud de onda?",
+        "options": [
+          "Violeta",
+          "Verde",
+          "Rojo",
+          "Azul"
+        ],
+        "correctAnswer": 2,
+        "timeLimit": 20,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "El rojo tiene la mayor longitud de onda visible (~700 nm). Por eso se usa en semáforos: penetra mejor la niebla y la lluvia que cualquier otro color.",
+          "emoji": "🔴",
+          "source": "Física Óptica — Espectro visible"
+        }
+      },
+      {
+        "id": "q002",
+        "topic": "rayos_x",
+        "question": "¿Quién descubrió los rayos X en 1895?",
+        "options": [
+          "Marie Curie",
+          "Wilhelm Röntgen",
+          "Albert Einstein",
+          "Nikola Tesla"
+        ],
+        "correctAnswer": 1,
+        "timeLimit": 15,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "Röntgen los llamó 'rayos X' porque X representa lo desconocido. La primera radiografía fue la mano de su esposa, con el anillo de bodas incluido.",
+          "emoji": "🩻",
+          "source": "Historia de la Física — Premio Nobel 1901"
+        }
+      },
+      {
+        "id": "q003",
+        "topic": "ondas_radio",
+        "question": "¿Cuál es aproximadamente la longitud de onda de una onda de radio FM?",
+        "options": [
+          "1 cm",
+          "1 m",
+          "100 m",
+          "1 km"
+        ],
+        "correctAnswer": 2,
+        "timeLimit": 20,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "Las ondas de radio FM tienen longitudes de onda entre 2.8 y 3.4 metros. Por eso las antenas de los autos tienen esa longitud aproximada.",
+          "emoji": "📻",
+          "source": "Telecomunicaciones"
+        }
+      },
+      {
+        "id": "q004",
+        "topic": "microondas",
+        "question": "¿Cuál es la principal aplicación de las microondas en la vida cotidiana?",
+        "options": [
+          "Esterilización",
+          "Hornos de cocina",
+          "Medicina",
+          "Astronomía"
+        ],
+        "correctAnswer": 1,
+        "timeLimit": 15,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "El horno microondas fue inventado accidentalmente por Percy Spencer en 1945 mientras trabajaba en radar. Notó que una barra de chocolate en su bolsillo se había derretido.",
+          "emoji": "🔥",
+          "source": "Historia de los inventos"
+        }
+      },
+      {
+        "id": "q005",
+        "topic": "infrarrojo",
+        "question": "¿Cuál es la principal fuente natural de radiación infrarroja?",
+        "options": [
+          "La Luna",
+          "El agua",
+          "El Sol",
+          "Las plantas"
+        ],
+        "correctAnswer": 2,
+        "timeLimit": 20,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "El 50% de la energía del Sol que llega a la Tierra es radiación infrarroja. Es lo que sentimos como calor.",
+          "emoji": "☀️",
+          "source": "Astrofísica"
+        }
+      },
+      {
+        "id": "q006",
+        "topic": "ultravioleta",
+        "question": "¿Qué tipo de radiación solar causa principalmente el envejecimiento de la piel?",
+        "options": [
+          "Infrarroja",
+          "Luz visible",
+          "Ultravioleta",
+          "Rayos gamma"
+        ],
+        "correctAnswer": 2,
+        "timeLimit": 15,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "La radiación UV daña el ADN de las células de la piel. La exposición crónica causa envejecimiento prematuro y aumenta el riesgo de cáncer de piel.",
+          "emoji": "🧴",
+          "source": "Dermatología"
+        }
+      },
+      {
+        "id": "q007",
+        "topic": "rayos_gamma",
+        "question": "¿Cuál es la fuente natural más común de rayos gamma?",
+        "options": [
+          "Hornos de cocina",
+          "Radiactividad natural",
+          "Vidrio",
+          "Agua salada"
+        ],
+        "correctAnswer": 1,
+        "timeLimit": 20,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "Los rayos gamma de la radiactividad natural son tan energéticos que pueden ionizar átomos. Esto es lo que los hace peligrosos pero también útiles en medicina.",
+          "emoji": "☢️",
+          "source": "Física nuclear"
+        }
+      },
+      {
+        "id": "q008",
+        "topic": "espectro",
+        "question": "¿En qué orden están las ondas electromagnéticas de menor a mayor longitud de onda?",
+        "options": [
+          "Radio, Micro, IR, Visible, UV, RX, Gamma",
+          "Gamma, RX, UV, Visible, IR, Micro, Radio",
+          "Visible, IR, UV, Radio, Micro, RX, Gamma",
+          "IR, Visible, Radio, Micro, UV, RX, Gamma"
+        ],
+        "correctAnswer": 1,
+        "timeLimit": 25,
+        "points": 1000,
+        "curiousFact": {
+          "title": "¿Sabías que...?",
+          "text": "El espectro electromagnético es un continuo. La única diferencia entre un rayo X y una onda de radio es su longitud de onda y energía.",
+          "emoji": "🌊",
+          "source": "Física clásica"
+        }
+      }
+    ]
+  }
+}

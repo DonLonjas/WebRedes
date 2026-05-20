@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espectro Electromagnético</title>
+  <link rel="icon" href="/icons/spectrum.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/presentation.css">
+  <link rel="stylesheet" href="/css/quiz.css">
+  <link rel="stylesheet" href="/css/fact.css">
+  <link rel="stylesheet" href="/css/leaderboard.css">
+  <link rel="stylesheet" href="/css/parallax-stars.css">
+</head>
+<body class="dark">
+  <!-- Fondo de arcoíris animado con espectro electromagnético -->
+  <div class="rainbow-bg dark">
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow"></div>
+    <div class="rainbow-h"></div>
+    <div class="rainbow-v"></div>
+  </div>
+  
+
+  <!-- Fondo parallax de estrellas (fallback sobre rainbow) -->
+  <div class="parallax-stars" aria-hidden="true"></div>
+  <script src="/js/parallax-stars.js"></script>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <h1><img src="/icons/spectrum.svg" alt="Espectro" class="logo-icon" /> Espectro Electromagnético</h1>
+      <div class="nav-right">
+        <span id="userDisplay"></span>
+        <button id="logoutBtn" class="btn btn-small">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pantalla de presentación -->
+  <div id="presentationScreen" class="screen active">
+    <div class="presentation-container">
+      <div class="spectrum-bar">
+        <input type="range" id="spectrumSlider" min="1" max="8" value="1">
+      </div>
+
+      <div class="slide-container">
+        <div class="slide-content">
+          <div class="slide-header">
+            <h2 id="slideTitle">Introducción al Espectro Electromagnético</h2>
+            <p id="slideSubtitle">Una onda de energía que viaja por el universo</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="slide-image" id="slideImage">📊</div>
+
+            <div class="slide-text">
+              <p id="slideContent"></p>
+              <p id="slideExtendedContent"></p>
+            </div>
+          </div>
+
+          <div class="spectrum-info" id="spectrumInfo" style="display: none;">
+            <div class="info-box">
+              <label>Frecuencia:</label>
+              <span id="frequency">Variable</span>
+            </div>
+            <div class="info-box">
+              <label>Longitud de onda:</label>
+              <span id="wavelength">Variable</span>
+            </div>
+            <div class="info-box">
+              <label>Energía:</label>
+              <span id="energy">Variable</span>
+            </div>
+          </div>
+
+          <div id="applicationsBox" class="applications-box" style="display: none;">
+            <h4>Aplicaciones:</h4>
+            <ul id="applicationsList"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="btn">← Anterior</button>
+        <span id="slideIndicator">1 / 8</span>
+        <button id="nextBtn" class="btn">Siguiente →</button>
+      </div>
+
+      <progress id="slideProgress" value="1" max="8"></progress>
+    </div>
+  </div>
+
+  <!-- Pantalla de espera del quiz -->
+  <div id="waitingScreen" class="screen">
+    <div class="waiting-container">
+      <h2>Esperando el quiz...</h2>
+      <div class="spinner"></div>
+      <p>El docente está preparando las preguntas</p>
+    </div>
+  </div>
+
+  <!-- Pantalla de quiz -->
+  <div id="quizScreen" class="screen">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <span id="questionNumber">Pregunta 1 de 8</span>
+        <div class="timer-container">
+          <div id="timerBar" class="timer-bar"></div>
+          <span id="timerText">20s</span>
+        </div>
+      </div>
+
+      <div class="quiz-content">
+        <h3 id="questionText"></h3>
+
+        <div id="optionsContainer" class="options-grid">
+          <!-- Opciones generadas dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla de dato curioso -->
+  <div id="factScreen" class="screen">
+    <div class="fact-container">
+      <div class="fact-card">
+        <h2 id="factTitle">¿Sabías que...?</h2>
+        <p id="factEmoji" class="fact-emoji"></p>
+        <p id="factText"></p>
+        <p id="factSource" class="fact-source"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla de leaderboard -->
+  <div id="leaderboardScreen" class="screen">
+    <div class="leaderboard-container">
+      <h2>📊 Leaderboard</h2>
+
+      <div id="podium" class="podium">
+        <!-- Podio generado dinámicamente -->
+      </div>
+
+      <div id="leaderboardTable" class="leaderboard-table">
+        <!-- Tabla generada dinámicamente -->
+      </div>
+
+      <button id="returnBtn" class="btn btn-primary" style="margin-top: 20px;">Volver a la Presentación</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/presentation.js"></script>
+  <script src="/js/quiz-client.js"></script>
+  <script src="/js/leaderboard.js"></script>
+</body>
+</html>

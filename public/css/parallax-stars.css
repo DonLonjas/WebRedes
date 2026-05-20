@@ -1,0 +1,76 @@
+/* parallax-stars.css — versión estilo CodePen (3 capas) */
+
+.parallax-stars {
+  --star-field-size: 2000px;
+  position: fixed;
+  inset: 0;
+  z-index: -1000;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.parallax-stars #stars,
+.parallax-stars #stars2,
+.parallax-stars #stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.parallax-stars #stars {
+  width: 1px;
+  height: 1px;
+  animation: animStar 50s linear infinite;
+}
+
+.parallax-stars #stars2 {
+  width: 2px;
+  height: 2px;
+  animation: animStar 100s linear infinite;
+}
+
+.parallax-stars #stars3 {
+  width: 3px;
+  height: 3px;
+  animation: animStar 150s linear infinite;
+}
+
+.parallax-stars #stars::after,
+.parallax-stars #stars2::after,
+.parallax-stars #stars3::after {
+  content: " ";
+  position: absolute;
+  top: var(--star-field-size);
+  left: 0;
+  background: transparent;
+}
+
+.parallax-stars #stars::after {
+  width: 1px;
+  height: 1px;
+  box-shadow: var(--stars-shadow-small, none);
+}
+
+.parallax-stars #stars2::after {
+  width: 2px;
+  height: 2px;
+  box-shadow: var(--stars-shadow-medium, none);
+}
+
+.parallax-stars #stars3::after {
+  width: 3px;
+  height: 3px;
+  box-shadow: var(--stars-shadow-big, none);
+}
+
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(calc(-1 * var(--star-field-size))); }
+}
+
+/* Ocultar fondo rainbow residual */
+.rainbow-bg {
+  display: none !important;
+}

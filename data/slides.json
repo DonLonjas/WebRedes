@@ -1,0 +1,100 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "Introducción al Espectro Electromagnético",
+      "subtitle": "Una onda de energía que viaja por el universo",
+      "content": "El espectro electromagnético es el rango completo de todas las posibles frecuencias de radiación electromagnética. Desde las ondas de radio de baja frecuencia hasta los rayos gamma de alta frecuencia. La energía aumenta a medida que la longitud de onda disminuye.",
+      "extendedContent": "Todas las formas de radiación electromagnética viajan a la velocidad de la luz en el vacío. Lo que diferencia a cada tipo es su frecuencia y longitud de onda. En esta presentación aprenderemos sobre los 7 tipos principales del espectro electromagnético.",
+      "frequency": "Variable",
+      "wavelength": "Variable",
+      "energy": "Variable",
+      "applications": ["Visión conceptual"],
+      "image": "/images/slide-1-spectrum.png"
+    },
+    {
+      "id": 2,
+      "title": "Ondas de Radio",
+      "subtitle": "Las ondas más largas y de menor energía",
+      "content": "Tienen las longitudes de onda más largas del espectro. Se usan en radiodifusión AM/FM, televisión, comunicaciones de larga distancia, WiFi y Bluetooth. Son invisibles para nuestros ojos pero nuestros receptores pueden captarlas fácilmente.",
+      "extendedContent": "Las ondas de radio fueron descubiertas por Heinrich Hertz en 1887. Se producen cuando los electrones oscilan en un conductor. Tienen muy poca energía, por lo que no son ionizantes y no dañan el ADN. Su bajo costo de transmisión las hace ideales para comunicaciones globales. El rango de frecuencia es tan amplio que se divide en subcategorías: VLF, LF, MF, HF, VHF, UHF.",
+      "frequency": "3 kHz a 300 GHz",
+      "wavelength": "1 mm a 100 km",
+      "energy": "Muy baja",
+      "applications": ["Radio AM/FM", "WiFi", "Bluetooth", "Televisión", "Teléfonos móviles"],
+      "image": "/images/slide-2-radio.png"
+    },
+    {
+      "id": 3,
+      "title": "Microondas",
+      "subtitle": "Usadas en cocina y comunicaciones",
+      "content": "Las microondas calientan los alimentos haciendo vibrar las moléculas de agua. También se usan en satélites, radares y telecomunicaciones de corta distancia. La longitud de onda típica es de centímetros a milímetros.",
+      "extendedContent": "El horno microondas fue inventado por Percy Spencer en 1945. Las microondas de 2.45 GHz utilizadas en hornos domésticos coinciden con la frecuencia de resonancia del agua. Los satélites de comunicación usan microondas para transmitir señales. Los radares pueden detectar objetos pequeños como lluvia e insectos. Son ionizantes débiles pero seguros en cantidades controladas.",
+      "frequency": "300 MHz a 300 GHz",
+      "wavelength": "1 mm a 1 m",
+      "energy": "Baja a media",
+      "applications": ["Hornos microondas", "Satélites", "Radar", "Comunicaciones"],
+      "image": "/images/slide-3-microwaves.png"
+    },
+    {
+      "id": 4,
+      "title": "Radiación Infrarroja",
+      "subtitle": "El calor que sentimos",
+      "content": "La radiación infrarroja es invisible para nuestros ojos pero la sentimos como calor. Se usa en termografía, mandos a distancia, visión nocturna y sistemas de calefacción. Todo objeto caliente emite radiación infrarroja.",
+      "extendedContent": "William Herschel descubrió la radiación infrarroja en 1800. Los cuerpos a temperatura ambiente emiten principalmente radiación infrarroja. Los termógrafos infrarrojo detectan este calor para crear imágenes. Los mandos de TV emiten infrarrojo pulsante que es captado por sensores especiales. Las cámaras de visión nocturna amplificam la radiación infrarroja existente. Se usa en astrofísica para observar objetos muy fríos o polvo cósmico.",
+      "frequency": "300 GHz a 430 THz",
+      "wavelength": "700 nm a 1 mm",
+      "energy": "Media",
+      "applications": ["Termografía", "Mandos a distancia", "Visión nocturna", "Calefacción"],
+      "image": "/images/slide-4-infrared.png"
+    },
+    {
+      "id": 5,
+      "title": "Luz Visible",
+      "subtitle": "Lo único que nuestros ojos pueden ver",
+      "content": "Es la única parte del espectro que nuestros ojos pueden detectar. Se divide en 7 colores del arcoíris: rojo, naranja, amarillo, verde, azul, índigo y violeta. Cada color tiene una frecuencia y longitud de onda diferente.",
+      "extendedContent": "El rojo tiene la longitud de onda más larga (~700 nm) y el violeta la más corta (~380 nm). La luz visible se produce cuando los electrones en los átomos saltan entre niveles de energía. El espacio es negro porque la mayor parte de la radiación del universo no es visible. Nuestros ojos son sensibles a solo una pequeña fracción del espectro. La absorción de luz en diferentes longitudes de onda es lo que nos permite ver colores.",
+      "frequency": "430 THz a 770 THz",
+      "wavelength": "380 nm a 700 nm",
+      "energy": "Media",
+      "applications": ["Visión", "Fotosíntesis", "Iluminación", "Fibra óptica"],
+      "image": "/images/slide-5-visible.png"
+    },
+    {
+      "id": 6,
+      "title": "Radiación Ultravioleta",
+      "subtitle": "Invisible pero poderosa",
+      "content": "Es lo que causa quemaduras solares. Se usa en esterilización UV, en insecticidas y en astrofísica para estudiar las estrellas jóvenes. Es altamente energética y puede dañar el ADN.",
+      "extendedContent": "La radiación UV del sol es bloqueada principalmente por la capa de ozono. Los rayos UVA, UVB y UVC tienen diferentes efectos en la piel. El protector solar tiene un factor SPF que indica cuánta radiación UV bloquea. Los tubos fluorescentes usan radiación UV para excitar fósforo que emite luz visible. En astronomía, el UV revela detalles de estrellas jóvenes y nebulosas. Las bacterias no pueden resistir radiación UV fuerte, por eso se usa para esterilizar.",
+      "frequency": "770 THz a 30 PHz",
+      "wavelength": "10 nm a 380 nm",
+      "energy": "Alta",
+      "applications": ["Protección solar", "Esterilización UV", "Astrofísica", "Forensia"],
+      "image": "/images/slide-6-ultraviolet.png"
+    },
+    {
+      "id": 7,
+      "title": "Rayos X",
+      "subtitle": "Penetran la materia",
+      "content": "Los rayos X pueden penetrar la piel y otros tejidos blandos. Se usan en medicina para radiografías, en seguridad aeroportuaria, en cristalografía y en astronomía de rayos X. Son altamente energéticos e ionizantes.",
+      "extendedContent": "Fueron descubiertos por Wilhelm Röntgen en 1895. La radiación X se produce cuando electrones rápidos golpean átomos pesados. En medicina, se usan dosis controladas para visualizar huesos y órganos. La cristalografía de rayos X reveló la estructura del ADN. Los satélites astronómicos detectan rayos X de objetos cósmicos como estrellas de neutrones y agujeros negros. La exposición prolongada a rayos X es peligrosa y puede causar cáncer.",
+      "frequency": "30 PHz a 30 EHz",
+      "wavelength": "0.01 nm a 10 nm",
+      "energy": "Muy alta",
+      "applications": ["Radiografías médicas", "Seguridad", "Cristalografía", "Astronomía"],
+      "image": "/images/slide-7-xrays.png"
+    },
+    {
+      "id": 8,
+      "title": "Rayos Gamma",
+      "subtitle": "La radiación más energética",
+      "content": "Son la radiación más energética. Se generan en reacciones nucleares, decaimiento radiactivo y en el universo (supernovas, agujeros negros). Se usan en radioterapia del cáncer y esterilización médica.",
+      "extendedContent": "Los rayos gamma se producen en decaimientos radiactivos de núcleos inestables. Tienen la capacidad de penetrar casi cualquier material. Son peligrosos para la vida porque pueden ionizar moléculas e interrumpir procesos celulares. En medicina, se usan en cantidades muy controladas para destruir células cancerosas. En el espacio, los rayos gamma de supernovas y agujeros negros son detectados por telescopios especializados. El Universo primordial estaba lleno de rayos gamma que se han enfriado hasta convertirse en radiación de fondo de microondas.",
+      "frequency": "> 30 EHz",
+      "wavelength": "< 0.01 nm",
+      "energy": "Extremadamente alta",
+      "applications": ["Radioterapia", "Esterilización médica", "Astrofísica", "Física nuclear"],
+      "image": "/images/slide-8-gamma.png"
+    }
+  ]
+}
