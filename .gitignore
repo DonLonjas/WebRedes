@@ -9,6 +9,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+data/historial/
 
 # Environment variables
 .env
@@ -28,3 +29,6 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+
+# Executables
+EspectroApp.exe

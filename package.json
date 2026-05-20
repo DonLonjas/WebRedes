@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx nodemon server.js",
     "start": "node server.js",
-    "build": "pkg . --targets node18-win-x64 --output dist/EspectroApp.exe"
+    "build": "pkg launcher.js --targets node18-win-x64 --output EspectroApp.exe"
   },
   "pkg": {
     "assets": [
